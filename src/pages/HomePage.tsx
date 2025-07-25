@@ -144,7 +144,7 @@ const TaskList = styled.ul`
       -webkit-appearance: none; /* iOS対応 */
       width: 18px;
       height: 18px;
-      border: 2px solid #6a0dad;
+      border: 1.5px solid #6a0dad;
       border-radius: 4px;
       cursor: pointer;
       vertical-align: middle;
