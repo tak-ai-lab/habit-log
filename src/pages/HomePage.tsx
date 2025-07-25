@@ -106,7 +106,8 @@ const TaskForm = styled.form`
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 10px 15px;
+    padding: 8px 12px; /* パディングを調整 */
+    font-size: 0.8em; /* フォントサイズを調整 */
     cursor: pointer;
     transition: background-color 0.3s ease;
 
