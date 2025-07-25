@@ -16,21 +16,21 @@ const Header = styled.div`
   h1 {
     margin: 0;
     font-size: 2em;
-    color: #6a0dad; /* 紫系のアクセントカラー */
+    color: ${props => props.theme.colors.primary}; /* 紫系のアクセントカラー */
   }
 
   button {
     padding: 8px 15px;
     font-size: 0.9em;
-    background-color: #f0e6fa; /* 淡い紫 */
-    color: #6a0dad;
+    background-color: ${props => props.theme.colors.primaryLight}; /* 淡い紫 */
+    color: ${props => props.theme.colors.primary};
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #e0d6f0;
+      background-color: ${props => props.theme.colors.primaryLight};
     }
   }
 `;
@@ -40,8 +40,8 @@ const ViewToggle = styled.div`
 
   button {
     margin: 0 5px;
-    background-color: #f0e6fa;
-    color: #6a0dad;
+    background-color: ${props => props.theme.colors.primaryLight};
+    color: ${props => props.theme.colors.primary};
     border: none;
     border-radius: 5px;
     padding: 8px 15px;
@@ -49,12 +49,12 @@ const ViewToggle = styled.div`
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #e0d6f0;
+      background-color: ${props => props.theme.colors.primaryLight};
     }
 
     &:disabled {
-      background-color: #dcdcdc;
-      color: #a0a0a0;
+      background-color: ${props => props.theme.colors.disabledBackground};
+      color: ${props => props.theme.colors.disabledColor};
       cursor: not-allowed;
     }
   }
@@ -68,8 +68,8 @@ const DateNavigation = styled.div`
 
   button {
     margin: 0 5px;
-    background-color: #f0e6fa;
-    color: #6a0dad;
+    background-color: ${props => props.theme.colors.primaryLight};
+    color: ${props => props.theme.colors.primary};
     border: none;
     border-radius: 5px;
     padding: 8px 12px; /* パディングを調整 */
@@ -78,14 +78,14 @@ const DateNavigation = styled.div`
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #e0d6f0;
+      background-color: ${props => props.theme.colors.primaryLight};
     }
   }
 
   span {
     font-size: 1.2em;
     font-weight: bold;
-    color: #6a0dad;
+    color: ${props => props.theme.colors.primary};
   }
 `;
 
@@ -97,13 +97,13 @@ const TaskForm = styled.form`
   input {
     flex-grow: 1;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid ${props => props.theme.colors.border};
     border-radius: 5px;
     font-size: 1em;
   }
 
   button {
-    background-color: #6a0dad;
+    background-color: ${props => props.theme.colors.primary};
     color: white;
     border: none;
     border-radius: 5px;
@@ -113,7 +113,7 @@ const TaskForm = styled.form`
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #5a0c9d;
+      background-color: ${props => props.theme.colors.primaryDark};
     }
   }
 `;
@@ -127,8 +127,8 @@ const TaskList = styled.ul`
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    border-bottom: 1px solid #eee;
-    background-color: #fff;
+    border-bottom: 1px solid ${props => props.theme.colors.lightBorder};
+    background-color: ${props => props.theme.colors.checkboxBackground};
     border-radius: 5px;
     margin-bottom: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -144,14 +144,14 @@ const TaskList = styled.ul`
       -webkit-appearance: none; /* iOS対応 */
       width: 18px;
       height: 18px;
-      border: 1px solid #6a0dad;
+      border: 1px solid ${props => props.theme.colors.checkboxBorder};
       border-radius: 4px;
       cursor: pointer;
       vertical-align: middle;
-      background-color: #fff;
+      background-color: ${props => props.theme.colors.checkboxBackground};
 
       &:checked {
-        background-color: #6a0dad;
+        background-color: ${props => props.theme.colors.checkboxChecked};
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
         background-repeat: no-repeat;
         background-position: center;
@@ -163,18 +163,18 @@ const TaskList = styled.ul`
       flex-grow: 1;
       text-align: left;
       cursor: pointer;
-      color: #333;
+      color: ${props => props.theme.colors.text};
 
       &.completed {
         text-decoration: line-through;
-        color: #999;
+        color: ${props => props.theme.colors.textLight};
       }
     }
 
     input[type="text"] {
       flex-grow: 1;
       padding: 5px;
-      border: 1px solid #6a0dad;
+      border: 1px solid ${props => props.theme.colors.primary};
       border-radius: 3px;
     }
 
@@ -182,15 +182,15 @@ const TaskList = styled.ul`
       margin-left: 10px;
       padding: 5px 10px;
       font-size: 0.8em;
-      background-color: #f0e6fa;
-      color: #6a0dad;
+      background-color: ${props => props.theme.colors.primaryLight};
+      color: ${props => props.theme.colors.primary};
       border: none;
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s ease;
 
       &:hover {
-        background-color: #e0d6f0;
+        background-color: ${props => props.theme.colors.primaryLight};
       }
     }
   }
@@ -204,12 +204,12 @@ const CalendarHeader = styled.div`
 
   h2 {
     margin: 0;
-    color: #6a0dad;
+    color: ${props => props.theme.colors.primary};
   }
 
   button {
-    background-color: #f0e6fa;
-    color: #6a0dad;
+    background-color: ${props => props.theme.colors.primaryLight};
+    color: ${props => props.theme.colors.primary};
     border: none;
     border-radius: 5px;
     padding: 8px 15px;
@@ -217,7 +217,7 @@ const CalendarHeader = styled.div`
     transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #e0d6f0;
+      background-color: ${props => props.theme.colors.primaryLight};
     }
   }
 `;
@@ -237,16 +237,16 @@ const CalendarGrid = styled.div`
 const CalendarDayHeader = styled.div`
   font-weight: bold;
   padding: 5px;
-  background-color: #f0e6fa;
+  background-color: ${props => props.theme.colors.primaryLight};
   border-radius: 5px;
-  color: #6a0dad;
+  color: ${props => props.theme.colors.primary};
 `;
 
 const CalendarDay = styled.div<{ isCurrentMonth: boolean; isTodayDay: boolean }>`
-  border: 1px solid #eee;
+  border: 1px solid ${props => props.theme.colors.lightBorder};
   padding: 5px;
   min-height: 80px;
-  background-color: ${props => props.isCurrentMonth ? (props.isTodayDay ? '#ffe0b2' : '#fff') : '#f0f0f0'};
+  background-color: ${props => props.isCurrentMonth ? (props.isTodayDay ? props.theme.colors.todayBackground : props.theme.colors.checkboxBackground) : props.theme.colors.otherMonthBackground};
   opacity: ${props => props.isCurrentMonth ? 1 : 0.6};
   text-align: left;
   font-size: 0.8em;
@@ -256,12 +256,12 @@ const CalendarDay = styled.div<{ isCurrentMonth: boolean; isTodayDay: boolean }>
   div {
     font-weight: bold;
     margin-bottom: 5px;
-    color: #333;
+    color: ${props => props.theme.colors.text};
   }
 
   .completed-task {
     font-size: 0.7em;
-    color: #4CAF50; /* 緑色 */
+    color: ${props => props.theme.colors.success}; /* 緑色 */
     word-break: break-all; /* 長いタスク名で折り返す */
   }
 
@@ -277,7 +277,7 @@ const CalendarDay = styled.div<{ isCurrentMonth: boolean; isTodayDay: boolean }>
 `;
 
 const ErrorMessage = styled.div`
-  color: red;
+  color: ${props => props.theme.colors.error};
   margin-top: 20px;
   font-weight: bold;
 `;

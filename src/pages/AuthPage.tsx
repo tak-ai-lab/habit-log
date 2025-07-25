@@ -9,7 +9,7 @@ const AuthContainer = styled.div`
   justify-content: center;
   min-height: 80vh;
   padding: 20px;
-  background-color: #fdfcfc;
+  background-color: ${props => props.theme.colors.background};
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
@@ -25,14 +25,14 @@ const AuthForm = styled.form`
 
 const AuthInput = styled.input`
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid ${props => props.theme.colors.border};
   border-radius: 5px;
   font-size: 1em;
 `;
 
 const AuthButton = styled.button`
   padding: 10px 15px;
-  background-color: #6a0dad;
+  background-color: ${props => props.theme.colors.primary};
   color: white;
   border: none;
   border-radius: 5px;
@@ -46,7 +46,7 @@ const AuthButton = styled.button`
 `;
 
 const ErrorMessage = styled.p`
-  color: red;
+  color: ${props => props.theme.colors.error};
   margin-top: 10px;
 `;
 

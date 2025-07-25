@@ -8,8 +8,8 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 400;
 
     color-scheme: light dark;
-    color: #213547;
-    background-color: #fdfcfc; /* 非常に明るい背景色 */
+    color: ${props => props.theme.colors.text}; /* #213547 は一旦 text に集約 */
+    background-color: ${props => props.theme.colors.background}; /* 非常に明るい背景色 */
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -23,13 +23,13 @@ export const GlobalStyle = createGlobalStyle`
     place-items: center;
     min-width: 320px;
     min-height: 100vh;
-    background-color: #fdfcfc; /* 明るい背景色 */
+    background-color: ${props => props.theme.colors.background}; /* 明るい背景色 */
   }
 
   h1 {
     font-size: 3.2em;
     line-height: 1.1;
-    color: #6a0dad; /* 紫系のアクセントカラー */
+    color: ${props => props.theme.colors.primary}; /* 紫系のアクセントカラー */
   }
 
   button {
@@ -39,13 +39,13 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: #f0e6fa; /* 淡い紫 */
+    background-color: ${props => props.theme.colors.primaryLight}; /* 淡い紫 */
     cursor: pointer;
     transition: border-color 0.25s;
-    color: #6a0dad;
+    color: ${props => props.theme.colors.primary};
   }
   button:hover {
-    border-color: #6a0dad;
+    border-color: ${props => props.theme.colors.primary};
   }
   button:focus, button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
@@ -54,11 +54,11 @@ export const GlobalStyle = createGlobalStyle`
   input[type="text"],
   input[type="email"] {
     border-radius: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid ${props => props.theme.colors.border};
     padding: 0.6em 1.2em;
     font-size: 1em;
-    background-color: #fff;
-    color: #333;
+    background-color: ${props => props.theme.colors.checkboxBackground};
+    color: ${props => props.theme.colors.text};
   }
 
   /* App全体のコンテナ */
