@@ -206,7 +206,7 @@ const CalendarHeader = styled.div`
 
 const CalendarGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: 5px;
   margin-top: 20px;
 
