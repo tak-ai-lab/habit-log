@@ -140,7 +140,26 @@ const TaskList = styled.ul`
     input[type="checkbox"] {
       margin-right: 10px;
       transform: scale(1.2);
-      accent-color: #6a0dad; /* チェックボックスの色 */
+      appearance: none; /* デフォルトのスタイルを無効化 */
+      width: 18px;
+      height: 18px;
+      border: 2px solid #6a0dad;
+      border-radius: 4px;
+      cursor: pointer;
+      position: relative;
+
+      &:checked {
+        background-color: #6a0dad;
+        &::after {
+          content: '✔';
+          color: white;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 14px;
+        }
+      }
     }
 
     span {
