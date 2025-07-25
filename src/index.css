@@ -63,11 +63,3 @@ input[type="email"] {
   color: #333;
 }
 
-/* App全体のコンテナ */
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  width: 100%;
-}
