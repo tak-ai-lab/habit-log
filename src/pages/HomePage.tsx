@@ -140,25 +140,22 @@ const TaskList = styled.ul`
     input[type="checkbox"] {
       margin-right: 10px;
       transform: scale(1.2);
-      appearance: none; /* デフォルトのスタイルを無効化 */
+      appearance: none;
+      -webkit-appearance: none; /* iOS対応 */
       width: 18px;
       height: 18px;
       border: 2px solid #6a0dad;
       border-radius: 4px;
       cursor: pointer;
-      position: relative;
+      vertical-align: middle;
+      background-color: #fff;
 
       &:checked {
         background-color: #6a0dad;
-        &::after {
-          content: '✔';
-          color: white;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          font-size: 14px;
-        }
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 60%;
       }
     }
 
