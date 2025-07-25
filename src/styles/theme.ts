@@ -4,9 +4,9 @@ import type { DefaultTheme } from 'styled-components';
 
 const theme: DefaultTheme = {
   colors: {
-    primary: '#6a0dad', // メインの紫
-    primaryLight: '#f0e6fa', // 淡い紫
-    primaryDark: '#5a0c9d', // 濃い紫
+    primary: '#007bff', // メインの青
+    primaryLight: '#e6f2ff', // 淡い青
+    primaryDark: '#0056b3', // 濃い青
     text: '#333',
     textLight: '#999',
     background: '#fdfcfc',
