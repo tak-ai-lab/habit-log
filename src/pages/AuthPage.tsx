@@ -40,7 +40,7 @@ const AuthButton = styled.button`
   font-size: 1em;
 
   &:disabled {
-    background-color: #ccc;
+    background-color: ${props => props.theme.colors.disabledBackground};
     cursor: not-allowed;
   }
 `;

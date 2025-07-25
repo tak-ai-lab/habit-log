@@ -16,8 +16,8 @@ const theme: DefaultTheme = {
     success: '#4CAF50', // 緑色
     todayBackground: '#ffe0b2', // 今日の日付の背景色
     checkboxBackground: '#fff',
-    checkboxBorder: '#6a0dad',
-    checkboxChecked: '#6a0dad',
+    checkboxBorder: '#007bff',
+    checkboxChecked: '#007bff',
     checkboxCheckmark: '#fff',
     disabledBackground: '#dcdcdc',
     disabledColor: '#a0a0a0',
