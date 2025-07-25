@@ -72,7 +72,8 @@ const DateNavigation = styled.div`
     color: #6a0dad;
     border: none;
     border-radius: 5px;
-    padding: 8px 15px;
+    padding: 8px 12px; /* パディングを調整 */
+    font-size: 0.9em; /* フォントサイズを調整 */
     cursor: pointer;
     transition: background-color 0.3s ease;
 
