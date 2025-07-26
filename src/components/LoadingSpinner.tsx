@@ -8,7 +8,7 @@ const spin = keyframes`
 
 export const LoadingSpinner = styled.div`
   border: 4px solid #f3f3f3; /* Light grey */
-  border-top: 4px solid #6a0dad; /* Purple */
+  border-top: 4px solid ${props => props.theme.colors.primary}; /* Purple */
   border-radius: 50%;
   width: 30px;
   height: 30px;
